@@ -1,0 +1,8 @@
+1. pip install pyinstaller
+
+2. pyinstaller -w [image file]13_setup.py
+
+3. dist foller에 image file(png) 복사하여 넣는다.
+
+4. dist folder [압축]하여 공유
+

@@ -1,0 +1,76 @@
+
+나도코딩님이 고정함
+나도코딩
+6개월 전(수정됨)
+[공지 사항] 2021.06.13
+* 게임에 버그가 있어서 알려드립니다.
+보석을 잡아서 끌고 오는 시점에 마우스 클릭을 하면 다시 보석이 쭉 발사되었다가 빠른 속도로 되돌아오는 버그가 있습니다. 이는 게임 루프 내 마우스 이벤트 처리하는 부분에서 다음과 같이 수정해주시면 해결됩니다.
+
+
+if event.type == pygame.MOUSEBUTTONDOWN: # 181 line
+
+    if claw.direction != STOP: # 조건 추가 : 집게가 좌우로 이동중일 때만 마우스 이벤트 처리
+        claw.set_direction(STOP)
+        to_x = move_speed
+
+학습에 혼란을 드려 대단히 죄송합니다. 그리고 버그 제보해주신 '봉희'님께 진심으로 감사드립니다.
+
+
+
+* 환경 설정이 필요하신 분은 아래 링크를 방문해주세요 ^^
+
+- https://nadocoding.tistory.com/4
+
+* 게임 설명 및 소스코드는 아래 링크에서 받으실 수 있습니다.
+- https://nadocoding.tistory.com/88
+
+
+
+[목차]
+(0:00:00) 0.Intro
+(0:00:26) 1.소개
+(0:03:12) 2.기본 프레임
+(0:07:12) 3.배경 이미지
+(0:10:58) 4.보석 클래스
+(0:19:24) 5.보석 그룹핑
+(0:26:17) 6.집게 클래스
+(0:33:15) 7.집게 중심점
+(0:41:35) 8.집게까지 직선 긋기
+(0:46:13) 9.집게 흔들기 #1
+(0:59:45) 10.집게 흔들기 #2
+(1:09:39) 11.집게 발사
+(1:17:46) 12.집게 돌아오기
+(1:24:52) 13.충돌 처리 기본 #1
+(1:35:49) 14.충돌 처리 기본 #2
+(1:42:14) 15.충돌 처리 기본 #3
+(1:55:20) 16.충돌 처리 고급 #1
+(2:03:01) 17.충돌 처리 고급 #2
+(2:08:45) 18.게임 점수
+(2:18:25) 19.게임 오버
+(2:30:24) 20.다양한 보석 추가
+(2:36:37) 21.PyInstaller 패키징
+
+
+
+
+
+[게임 이미지]
+1. 집게
+https://www.freepik.com/free-vector/various-manufacturing-robots-arms_9177007.htm
+
+
+
+2. 보석
+https://www.freepik.com/free-vector/mining-game-icons_3949130.htm#page=1&query=gold%20miner&position=5
+
+
+3. 배경
+https://www.freepik.com/free-photo/abstract-luxury-gold-yellow-gradient-wall_13477913.htm#page=1&query=yellow&position=45
+
+
+4. 카트
+https://www.freepik.com/free-vector/mining-carts-loaded-with-stone-gold-illustration_1148504.htm#page=1&query=mine%20cart&position=33
+
+
+5. 광부
+https://www.freepik.com/free-vector/mining-concept-set-with-retro-cartoon-style-labor-workers-cartoon-style_2874951.htm#page=1&query=gold%20miner&position=1

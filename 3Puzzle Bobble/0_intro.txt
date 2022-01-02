@@ -1,0 +1,170 @@
+* 본 영상은 파이썬 기본편 + 활용편1 을 학습한 분들을 위한 강의입니다.
+파이썬을 처음 접하신다면, 아래 강의들을 먼저 공부해주세요 ^^
+
+- 기본편 바로가기 : https://youtu.be/kWiCuklohdY
+- 활용편1 (게임개발) 바로가기 : https://youtu.be/Dkx8Pl6QKW0
+
+
+* 환경 설정이 필요하신 분은 아래 링크를 방문해주세요
+- https://nadocoding.tistory.com/4
+
+* 게임 설명 및 소스코드는 아래 링크에서 받으실 수 있습니다.
+- https://nadocoding.tistory.com/89
+
+
+[목차]
+(0:00:00) 0.Intro
+(0:00:19) 1.소개
+(0:03:56) 2.기본프레임
+(0:07:48) 3.배경
+(0:11:29) 4.버블 (개발 전략)
+(0:16:49) 5.버블 (이미지 생성)
+(0:25:55) 6.버블 (게임 맵)
+(0:32:42) 7.버블 (맵에 그리기)
+(0:47:06) 8.발사대
+(0:53:53) 9.겨냥하기 #1
+(1:06:40) 10.겨냥하기 #2
+(1:10:23) 11.버블 발사 (이번에 쏠 버블)
+(1:22:25) 12.버블 발사 (발사 및 튕기기)
+(1:37:13) 13.버블 발사 (다음에 쏠 버블)
+(1:42:11) 14.충돌 처리 #1
+(1:53:36) 15.충돌 처리 #2
+(2:03:38) 16.천장 충돌 처리
+(2:08:02) 17.재귀 함수 호출
+(2:19:59) 18.퀴즈
+(2:27:00) 19.DFS 알고리즘
+(2:39:41) 20.버블 터뜨리기 (방문처리)
+(2:50:16) 21.방문한 버블 터뜨리기
+(2:58:33) 22.방문하지 않은 버블 터뜨리기
+(3:09:50) 23.화면 흔들기
+(3:19:16) 24.벽 내리기 #1
+(3:27:32) 25.벽 내리기 #2
+(3:35:02) 26.게임 종료 처리 #1
+(3:41:53) 27.게임 종료 처리 #2
+(3:47:39) 28.게임 완성
+
+
+Designed by freepik, flaticon
+ : https://www.freepik.com
+ : https://www.flaticon.com
+댓글 83개
+Choongho Jo
+공개 댓글 추가…
+나도코딩
+나도코딩님이 고정함
+나도코딩
+5개월 전(수정됨)
+* 소스코드를 업로드 하였습니다. 강의와 동작이 다르거나 의도대로 되지 않으시는 경우 코드를 비교하면서 학습 부탁드립니다.
+- https://nadocoding.tistory.com/89
+
+* 환경 설정이 필요하신 분은 아래 링크를 방문해주세요 ^^
+- https://nadocoding.tistory.com/4
+
+
+
+
+[목차]
+(0:00:00) 0.Intro
+(0:00:19) 1.소개
+(0:03:56) 2.기본프레임
+(0:07:48) 3.배경
+(0:11:29) 4.버블 (개발 전략)
+(0:16:49) 5.버블 (이미지 생성)
+(0:25:55) 6.버블 (게임 맵)
+(0:32:42) 7.버블 (맵에 그리기)
+(0:47:06) 8.발사대
+(0:53:53) 9.겨냥하기 #1
+(1:06:40) 10.겨냥하기 #2
+(1:10:23) 11.버블 발사 (이번에 쏠 버블)
+(1:22:25) 12.버블 발사 (발사 및 튕기기)
+(1:37:13) 13.버블 발사 (다음에 쏠 버블)
+(1:42:11) 14.충돌 처리 #1
+(1:53:36) 15.충돌 처리 #2
+(2:03:38) 16.천장 충돌 처리
+(2:08:02) 17.재귀 함수 호출
+(2:19:59) 18.퀴즈
+(2:27:00) 19.DFS 알고리즘
+(2:39:41) 20.버블 터뜨리기 (방문처리)
+(2:50:16) 21.방문한 버블 터뜨리기
+(2:58:33) 22.방문하지 않은 버블 터뜨리기
+(3:09:50) 23.화면 흔들기
+(3:19:16) 24.벽 내리기 #1
+(3:27:32) 25.벽 내리기 #2
+(3:35:02) 26.게임 종료 처리 #1
+(3:41:53) 27.게임 종료 처리 #2
+(3:47:39) 28.게임 완성
+
+
+
+
+
+[게임 맵]
+# lv1
+map = [
+	list("RRYYBBGG"),
+	list("RRYYBBG/"),
+	list("BBGGRRYY"),
+	list("BGGRRYY/"),
+	list("........"),
+	list("......./"),
+	list("........"),
+	list("......./"),
+	list("........"),
+	list("......./"),
+	list("........")
+]
+
+# lv2
+map = [
+	list("...YY..."),
+	list("...G.../"),
+	list("...R...."),
+	list("...B.../"),
+	list("...R...."),
+	list("...G.../"),
+	list("...P...."),
+	list("...P.../"),
+	list("........"),
+	list("......./"),
+	list("........")
+]
+
+# lv3
+map = [
+	list("G......G"),
+	list("RGBYRGB/"),
+	list("Y......Y"),
+	list("BYRGBYR/"),
+	list("...R...."),
+	list("...G.../"),
+	list("...R...."),
+	list("......./"),
+	list("........"),
+	list("......./"),
+	list("........")
+]
+
+
+
+
+[게임 이미지]
+1. 배경
+https://www.freepik.com/free-vector/mobile-background-with-starry-sky-purple-tones_4774198.htm#page=7&query=purple%20background&position=19
+
+2. 버블
+https://www.freepik.com/free-vector/cartoon-soap-bubble-set_13050193.htm#page=1&query=bubble&position=30
+
+3. 화살표
+https://www.freepik.com/free-vector/flat-design-arrow-collection_5940015.htm#page=1&query=arrow&position=3
+
+4. 벽
+https://www.freepik.com/free-vector/glass-door-window-with-white-rolling-shutter_9171773.htm#query=shutter%20close&position=1
+
+5. 공룡
+https://www.freepik.com/free-vector/cartoon-adorable-baby-dinosaur-illustrated_13818620.htm#page=1&query=dinosaur&position=38
+
+6. 자루
+https://www.freepik.com/free-vector/set-realistic-canvas-bag-full-grains-cereal_1472064.htm#page=1&query=sack&position=33
+
+7. 발사대
+https://www.flaticon.com/free-icon/cradle_191586
